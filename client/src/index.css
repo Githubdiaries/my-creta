@@ -21,8 +21,8 @@ img { display:block; max-width:100%; }
 .topbar-center { opacity:.68; }
 .menu-trigger { font-family:'IBM Plex Mono'; font-size:10px; text-transform:uppercase; letter-spacing:.12em; }
 .menu-trigger svg { color:var(--lime); }
-.menu-panel { position:fixed; z-index:15; inset:0; background:var(--lime); color:var(--ink); transform:translateY(-105%); transition:transform .65s var(--ease); }
-.menu-panel-open { transform:translateY(0); }
+.menu-panel { position:fixed; z-index:15; inset:0; overflow:hidden; visibility:hidden; pointer-events:none; background:var(--lime); color:var(--ink); transform:translateY(-105%); transition:transform .65s var(--ease),visibility 0s linear .65s; }
+.menu-panel-open { visibility:visible; pointer-events:auto; transform:translateY(0); transition:transform .65s var(--ease),visibility 0s linear 0s; }
 .menu-panel-inner { min-height:100%; padding:140px 8vw 50px; display:flex; flex-direction:column; max-width:900px; }
 .menu-kicker { opacity:.65; margin-bottom:42px; }
 .menu-link { display:flex; align-items:center; gap:25px; background:none; border-bottom:1px solid rgba(11,13,13,.25); padding:17px 0; text-align:left; font:600 clamp(30px,5vw,66px) 'Space Grotesk'; letter-spacing:-.055em; transition:padding .25s var(--ease); }
@@ -109,3 +109,16 @@ h2 { font-size:clamp(48px,7.5vw,108px); }
 @media (max-width:800px) { .topbar-center { display:none; } .topbar { padding:0 6vw; } .hero-section { padding:0 7vw 8vh; min-height:760px; } .hero-image { object-position:62% center; } .hero-bottom { align-items:flex-start; } .hero-index { display:none; } .statement-section { padding:130px 8vw 120px; } .chapter-rail { position:static; writing-mode:initial; margin-bottom:80px; } .chapter-rail .rail-line { width:52px; height:1px; } .statement-copy { margin:42px 0 28px; } .detail-section { display:flex; flex-direction:column; align-items:stretch; gap:70px; padding:90px 8vw; } .detail-image-wrap img { aspect-ratio:1.15; } .detail-copy .chapter-rail { margin-bottom:50px; } .big-stats { margin-top:75px; gap:20px; } .stat strong { font-size:clamp(52px,16vw,100px); } .spec-sheet { grid-template-columns:1fr 1fr; } .escape-section { min-height:700px; padding:85px 8vw; } .color-picker { right:8vw; bottom:45px; } .footer { grid-template-columns:1fr 1fr; } .footer-meta { text-align:left; } }
 @media (max-width:480px) { .hero-section { min-height:690px; } h1 { font-size:18vw; } h2 { font-size:15vw; } .hero-bottom { flex-direction:column; gap:22px; } .statement-section { min-height:680px; } .ghost-number { font-size:185px; left:-30px; } .big-stats { grid-template-columns:1fr; margin-top:60px; gap:45px; } .stat strong { font-size:25vw; } .spec-sheet-open { max-height:220px; } .footer { grid-template-columns:1fr; gap:17px; } .footer-meta { text-align:left; } }
 @media (prefers-reduced-motion:reduce) { *,*::before,*::after { animation-duration:.001ms!important; transition-duration:.001ms!important; scroll-behavior:auto!important; } }
+
+/* Short-landscape safeguard: keep the fixed header, chapter kicker, title, and CTA inside one compact hero frame. */
+@media (min-width:801px) and (orientation:landscape) and (max-height:620px) {
+  .topbar { height:54px; padding-inline:4vw; }
+  .hero-section { min-height:100svh; padding:74px 8vw 28px; }
+  .hero-content { max-width:760px; }
+  .hero-kicker { margin-bottom:13px; }
+  h1 { font-size:clamp(58px, 8.2vw, 86px); line-height:.84; }
+  .hero-bottom { margin-top:25px; max-width:560px; gap:26px; }
+  .hero-bottom p { font-size:11px; line-height:1.5; }
+  .round-arrow { width:46px; height:46px; }
+  .hero-index { right:2.8vw; }
+}
