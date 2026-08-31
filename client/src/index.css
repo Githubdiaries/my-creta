@@ -15,14 +15,14 @@ img { display:block; max-width:100%; }
 .topbar { height:76px; position:fixed; z-index:20; inset:0 0 auto; display:flex; align-items:center; justify-content:space-between; padding:0 4vw; transition:background .3s var(--ease), color .3s var(--ease); }
 .topbar-scrolled { background:rgba(11,13,13,.8); backdrop-filter:blur(16px); border-bottom:1px solid var(--line); }
 .brand-lockup,.menu-trigger { background:none; display:flex; align-items:center; gap:11px; }
-.brand-lockup { font-family:'Space Grotesk'; font-weight:700; letter-spacing:.19em; font-size:12px; text-transform:uppercase; } .brand-lockup span, .footer-brand span { display:inline-block; transform:scaleX(.94); transform-origin:left center; }
+.brand-lockup { font-family:'Space Grotesk'; font-weight:700; letter-spacing:.14em; font-size:13px; }
 .brand-lockup img { width:26px; height:26px; object-fit:contain; }
 .brand-dot { color:var(--lime); padding:0 3px; font-weight:400; }
 .topbar-center { opacity:.68; }
 .menu-trigger { font-family:'IBM Plex Mono'; font-size:10px; text-transform:uppercase; letter-spacing:.12em; }
 .menu-trigger svg { color:var(--lime); }
-.menu-panel { position:fixed; z-index:15; inset:0; overflow:hidden; visibility:hidden; pointer-events:none; background:var(--lime); color:var(--ink); transform:translateY(-105%); transition:transform .65s var(--ease),visibility 0s linear .65s; }
-.menu-panel-open { visibility:visible; pointer-events:auto; transform:translateY(0); transition:transform .65s var(--ease),visibility 0s linear 0s; }
+.menu-panel { position:fixed; z-index:15; inset:0; background:var(--lime); color:var(--ink); transform:translateY(-105%); transition:transform .65s var(--ease); }
+.menu-panel-open { transform:translateY(0); }
 .menu-panel-inner { min-height:100%; padding:140px 8vw 50px; display:flex; flex-direction:column; max-width:900px; }
 .menu-kicker { opacity:.65; margin-bottom:42px; }
 .menu-link { display:flex; align-items:center; gap:25px; background:none; border-bottom:1px solid rgba(11,13,13,.25); padding:17px 0; text-align:left; font:600 clamp(30px,5vw,66px) 'Space Grotesk'; letter-spacing:-.055em; transition:padding .25s var(--ease); }
@@ -98,7 +98,7 @@ h2 { font-size:clamp(48px,7.5vw,108px); }
 .color-swatch { width:22px; height:22px; border:1px solid rgba(255,255,255,.5); border-radius:50%; padding:0; transition:transform .2s var(--ease),outline .2s var(--ease); }
 .color-swatch.selected { outline:2px solid var(--lime); outline-offset:4px; transform:scale(1.07); }
 .footer { background:var(--ink); display:grid; grid-template-columns:1fr 1fr auto auto; gap:30px; align-items:center; padding:35px 4vw; color:#9da19d; }
-.footer-brand { display:flex; align-items:center; gap:12px; font:700 12px 'Space Grotesk'; color:var(--paper); letter-spacing:.19em; text-transform:uppercase; }
+.footer-brand { display:flex; align-items:center; gap:12px; font:700 13px 'Space Grotesk'; color:var(--paper); letter-spacing:.08em; }
 .footer-brand img { width:26px; height:26px; }
 .footer p { margin:0; }
 .back-top { background:none; color:var(--paper); }
@@ -109,35 +109,3 @@ h2 { font-size:clamp(48px,7.5vw,108px); }
 @media (max-width:800px) { .topbar-center { display:none; } .topbar { padding:0 6vw; } .hero-section { padding:0 7vw 8vh; min-height:760px; } .hero-image { object-position:62% center; } .hero-bottom { align-items:flex-start; } .hero-index { display:none; } .statement-section { padding:130px 8vw 120px; } .chapter-rail { position:static; writing-mode:initial; margin-bottom:80px; } .chapter-rail .rail-line { width:52px; height:1px; } .statement-copy { margin:42px 0 28px; } .detail-section { display:flex; flex-direction:column; align-items:stretch; gap:70px; padding:90px 8vw; } .detail-image-wrap img { aspect-ratio:1.15; } .detail-copy .chapter-rail { margin-bottom:50px; } .big-stats { margin-top:75px; gap:20px; } .stat strong { font-size:clamp(52px,16vw,100px); } .spec-sheet { grid-template-columns:1fr 1fr; } .escape-section { min-height:700px; padding:85px 8vw; } .color-picker { right:8vw; bottom:45px; } .footer { grid-template-columns:1fr 1fr; } .footer-meta { text-align:left; } }
 @media (max-width:480px) { .hero-section { min-height:690px; } h1 { font-size:18vw; } h2 { font-size:15vw; } .hero-bottom { flex-direction:column; gap:22px; } .statement-section { min-height:680px; } .ghost-number { font-size:185px; left:-30px; } .big-stats { grid-template-columns:1fr; margin-top:60px; gap:45px; } .stat strong { font-size:25vw; } .spec-sheet-open { max-height:220px; } .footer { grid-template-columns:1fr; gap:17px; } .footer-meta { text-align:left; } }
 @media (prefers-reduced-motion:reduce) { *,*::before,*::after { animation-duration:.001ms!important; transition-duration:.001ms!important; scroll-behavior:auto!important; } }
-
-/* Short-landscape safeguard: keep the fixed header, chapter kicker, title, and CTA inside one compact hero frame. */
-@media (min-width:801px) and (orientation:landscape) and (max-height:620px) {
-  .topbar { height:54px; padding-inline:4vw; }
-  .hero-section { min-height:100svh; padding:74px 8vw 28px; }
-  .hero-content { max-width:760px; }
-  .hero-kicker { margin-bottom:13px; }
-  h1 { font-size:clamp(58px, 8.2vw, 86px); line-height:.84; }
-  .hero-bottom { margin-top:25px; max-width:560px; gap:26px; }
-  .hero-bottom p { font-size:11px; line-height:1.5; }
-  .round-arrow { width:46px; height:46px; }
-  .hero-index { right:2.8vw; }
-}
-
-/* Original Creta hero treatment: use the reference for editorial scale and contrast, but keep the SUV, brand chrome, and supporting story visible. */
-@media (min-width:801px) {
-  .hero-section { min-height:100svh; overflow:hidden; background:#0b0d0d; padding:0 8vw 7vh; align-items:flex-end; }
-  .hero-image { opacity:.92; filter:brightness(.72) saturate(.68); }
-  .hero-shade { background:linear-gradient(90deg,rgba(8,10,10,.82) 0%,rgba(8,10,10,.35) 50%,rgba(8,10,10,.08) 100%),linear-gradient(0deg,rgba(8,10,10,.82),transparent 56%); }
-  .hero-content { position:relative; inset:auto; max-width:850px; pointer-events:auto; }
-  .hero-content h1 { position:relative; left:auto; top:auto; width:auto; max-width:850px; font-size:clamp(74px, 8.6vw, 124px); line-height:.84; letter-spacing:-.08em; white-space:normal; }
-}
-@media (min-width:801px) and (orientation:landscape) and (max-height:620px) {
-  .topbar { height:54px; padding-inline:4vw; visibility:visible; pointer-events:auto; }
-  .hero-section { min-height:100svh; padding:74px 8vw 28px; }
-  .hero-image { opacity:.92; }
-  .hero-content h1 { font-size:clamp(58px, 8.2vw, 86px); line-height:.84; }
-  .hero-kicker { margin-bottom:13px; }
-  .hero-bottom { margin-top:25px; max-width:560px; gap:26px; }
-  .hero-bottom p { font-size:11px; line-height:1.5; }
-  .round-arrow { width:46px; height:46px; }
-}
