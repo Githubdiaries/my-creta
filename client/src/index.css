@@ -122,3 +122,23 @@ h2 { font-size:clamp(48px,7.5vw,108px); }
   .round-arrow { width:46px; height:46px; }
   .hero-index { right:2.8vw; }
 }
+
+/* Reference crop treatment: the hero becomes a title card, with intentional edge clipping and the vehicle pushed into the background. */
+@media (min-width:801px) {
+  .hero-section { min-height:100svh; overflow:hidden; background:#0b0d0d; padding:0; align-items:initial; }
+  .hero-image { opacity:.12; filter:brightness(.42) saturate(.55); }
+  .hero-shade { background:rgba(8,10,10,.82); }
+  .hero-content { position:absolute; inset:0; max-width:none; pointer-events:none; }
+  .hero-kicker, .hero-bottom, .hero-index { display:none; }
+  .hero-content h1 { position:absolute; left:-.55vw; top:-1.7vw; width:max-content; max-width:none; font-size:clamp(100px, 14.4vw, 205px); line-height:.80; letter-spacing:-.095em; white-space:nowrap; }
+}
+@media (min-width:801px) and (orientation:landscape) and (max-height:620px) {
+  .hero-content h1 { top:-1.9vw; font-size:clamp(92px, 14.4vw, 174px); }
+}
+
+/* Exact title-card variant from the supplied reference: desktop chrome and imagery yield to the oversized type. */
+@media (min-width:801px) {
+  .topbar { height:0; padding:0; visibility:hidden; pointer-events:none; }
+  .hero-image { opacity:0; }
+  .hero-shade { background:#0b0d0d; }
+}
