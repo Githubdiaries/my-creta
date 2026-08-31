@@ -53,8 +53,7 @@ export default function Home() {
               <ArrowUpRight size={21} />
             </button>
           ))}
-          <div className="menu-footer mono">CRETA CAR / EST. 2026</div>
-        </div>
+         
       </div>
 
       <section id="top" className="hero-section">
