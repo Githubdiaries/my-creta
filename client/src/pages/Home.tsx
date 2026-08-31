@@ -53,7 +53,7 @@ export default function Home() {
               <ArrowUpRight size={21} />
             </button>
           ))}
-         
+        </div>
       </div>
 
       <section id="top" className="hero-section">
@@ -66,7 +66,8 @@ export default function Home() {
             <p>Creta Car is a compact SUV with a larger sense of possibility. Designed to move through the city, then keep going.</p>
             <button className="round-arrow" onClick={() => go("machine")} aria-label="Explore the machine"><ArrowDownRight size={23} /></button>
           </div>
-      
+        </div>
+
         <div className="hero-index mono">SCROLL TO EXPLORE <span>↓</span></div>
       </section>
 

@@ -1,7 +1,7 @@
-# Responsive collision fix
+# Home.tsx JSX repair
 
-- [x] Inspect the live reported viewport and confirm the hero overflow pattern.
-- [x] Add a short-landscape responsive rule that reserves header space and scales the hero composition.
-- [x] Prevent hero content from extending above the viewport while preserving the cinematic vehicle crop.
-- [x] Verify desktop, short-landscape, and mobile screenshots after the change.
-- [ ] Save the corrected project checkpoint and deliver it.
+- [x] Inspect the current Home.tsx nesting and identify all unmatched JSX elements.
+- [x] Repair the missing closing tags without changing the intended visual layout.
+- [x] Run TypeScript validation and the production build.
+- [x] Verify the page renders at desktop and short-landscape sizes.
+- [ ] Save and deliver the corrected checkpoint.
