@@ -34,8 +34,8 @@ export default function Home() {
     <main className="site-shell">
       <header className={`topbar ${scrolled ? "topbar-scrolled" : ""}`}>
         <button className="brand-lockup" onClick={() => go("top")} aria-label="Back to top">
-          <img src={mark} alt="Creta Car mark" />
-        
+          <img src={mark} alt="Creta mark" />
+          <span>CRETA</span>
         </button>
         
         <button className="menu-trigger" onClick={() => setMenuOpen((v) => !v)} aria-expanded={menuOpen} aria-label="Open navigation">
@@ -116,7 +116,7 @@ export default function Home() {
         <div className="color-picker"><span className="mono">CHOOSE YOUR SIGNAL</span><div>{colors.map((color, i) => <button key={color} onClick={() => setActiveColor(i)} className={`color-swatch ${activeColor === i ? "selected" : ""}`} style={{ backgroundColor: color }} aria-label={`Select color ${i + 1}`} />)}</div></div>
       </section>
 
-      <footer className="footer"><div className="footer-brand"><img src={mark} alt="" /><span>CRETA / CAR</span></div><p className="mono">Built for the next drive.</p><button className="mono back-top" onClick={() => go("top")}>Back to top ↑</button><span className="mono footer-meta">© 2026 / CC</span></footer>
+      <footer className="footer"><div className="footer-brand"><img src={mark} alt="" /><span>CRETA</span></div><p className="mono">Built for the next drive.</p><button className="mono back-top" onClick={() => go("top")}>Back to top ↑</button><span className="mono footer-meta">© 2026 / CC</span></footer>
     </main>
   );
 }

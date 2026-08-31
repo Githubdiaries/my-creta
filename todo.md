@@ -1,7 +1,7 @@
-# Home.tsx JSX repair
+# Standalone CRETA wordmark
 
-- [x] Inspect the current Home.tsx nesting and identify all unmatched JSX elements.
-- [x] Repair the missing closing tags without changing the intended visual layout.
-- [x] Run TypeScript validation and the production build.
-- [x] Verify the page renders at desktop and short-landscape sizes.
-- [ ] Save and deliver the corrected checkpoint.
+- [x] Confirm every top and footer occurrence of the CRETA / CAR lockup.
+- [x] Remove the “/ CAR” label while preserving the symbol and CRETA text.
+- [x] Refine CRETA typography to feel more engineered and automotive.
+- [x] Run validation and verify the updated lockups in the preview.
+- [ ] Save the updated checkpoint.

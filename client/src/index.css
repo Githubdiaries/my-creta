@@ -15,7 +15,7 @@ img { display:block; max-width:100%; }
 .topbar { height:76px; position:fixed; z-index:20; inset:0 0 auto; display:flex; align-items:center; justify-content:space-between; padding:0 4vw; transition:background .3s var(--ease), color .3s var(--ease); }
 .topbar-scrolled { background:rgba(11,13,13,.8); backdrop-filter:blur(16px); border-bottom:1px solid var(--line); }
 .brand-lockup,.menu-trigger { background:none; display:flex; align-items:center; gap:11px; }
-.brand-lockup { font-family:'Space Grotesk'; font-weight:700; letter-spacing:.14em; font-size:13px; }
+.brand-lockup { font-family:'Space Grotesk'; font-weight:700; letter-spacing:.19em; font-size:12px; text-transform:uppercase; } .brand-lockup span, .footer-brand span { display:inline-block; transform:scaleX(.94); transform-origin:left center; }
 .brand-lockup img { width:26px; height:26px; object-fit:contain; }
 .brand-dot { color:var(--lime); padding:0 3px; font-weight:400; }
 .topbar-center { opacity:.68; }
@@ -98,7 +98,7 @@ h2 { font-size:clamp(48px,7.5vw,108px); }
 .color-swatch { width:22px; height:22px; border:1px solid rgba(255,255,255,.5); border-radius:50%; padding:0; transition:transform .2s var(--ease),outline .2s var(--ease); }
 .color-swatch.selected { outline:2px solid var(--lime); outline-offset:4px; transform:scale(1.07); }
 .footer { background:var(--ink); display:grid; grid-template-columns:1fr 1fr auto auto; gap:30px; align-items:center; padding:35px 4vw; color:#9da19d; }
-.footer-brand { display:flex; align-items:center; gap:12px; font:700 13px 'Space Grotesk'; color:var(--paper); letter-spacing:.08em; }
+.footer-brand { display:flex; align-items:center; gap:12px; font:700 12px 'Space Grotesk'; color:var(--paper); letter-spacing:.19em; text-transform:uppercase; }
 .footer-brand img { width:26px; height:26px; }
 .footer p { margin:0; }
 .back-top { background:none; color:var(--paper); }
