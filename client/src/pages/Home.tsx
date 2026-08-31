@@ -35,7 +35,7 @@ export default function Home() {
       <header className={`topbar ${scrolled ? "topbar-scrolled" : ""}`}>
         <button className="brand-lockup" onClick={() => go("top")} aria-label="Back to top">
           <img src={mark} alt="Creta Car mark" />
-          <span>CRETA<span className="brand-dot">/</span>CAR</span>
+        
         </button>
         
         <button className="menu-trigger" onClick={() => setMenuOpen((v) => !v)} aria-expanded={menuOpen} aria-label="Open navigation">
