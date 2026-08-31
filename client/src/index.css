@@ -123,22 +123,21 @@ h2 { font-size:clamp(48px,7.5vw,108px); }
   .hero-index { right:2.8vw; }
 }
 
-/* Reference crop treatment: the hero becomes a title card, with intentional edge clipping and the vehicle pushed into the background. */
+/* Original Creta hero treatment: use the reference for editorial scale and contrast, but keep the SUV, brand chrome, and supporting story visible. */
 @media (min-width:801px) {
-  .hero-section { min-height:100svh; overflow:hidden; background:#0b0d0d; padding:0; align-items:initial; }
-  .hero-image { opacity:.12; filter:brightness(.42) saturate(.55); }
-  .hero-shade { background:rgba(8,10,10,.82); }
-  .hero-content { position:absolute; inset:0; max-width:none; pointer-events:none; }
-  .hero-kicker, .hero-bottom, .hero-index { display:none; }
-  .hero-content h1 { position:absolute; left:-.55vw; top:-1.7vw; width:max-content; max-width:none; font-size:clamp(100px, 14.4vw, 205px); line-height:.80; letter-spacing:-.095em; white-space:nowrap; }
+  .hero-section { min-height:100svh; overflow:hidden; background:#0b0d0d; padding:0 8vw 7vh; align-items:flex-end; }
+  .hero-image { opacity:.92; filter:brightness(.72) saturate(.68); }
+  .hero-shade { background:linear-gradient(90deg,rgba(8,10,10,.82) 0%,rgba(8,10,10,.35) 50%,rgba(8,10,10,.08) 100%),linear-gradient(0deg,rgba(8,10,10,.82),transparent 56%); }
+  .hero-content { position:relative; inset:auto; max-width:850px; pointer-events:auto; }
+  .hero-content h1 { position:relative; left:auto; top:auto; width:auto; max-width:850px; font-size:clamp(74px, 8.6vw, 124px); line-height:.84; letter-spacing:-.08em; white-space:normal; }
 }
 @media (min-width:801px) and (orientation:landscape) and (max-height:620px) {
-  .hero-content h1 { top:-1.9vw; font-size:clamp(92px, 14.4vw, 174px); }
-}
-
-/* Exact title-card variant from the supplied reference: desktop chrome and imagery yield to the oversized type. */
-@media (min-width:801px) {
-  .topbar { height:0; padding:0; visibility:hidden; pointer-events:none; }
-  .hero-image { opacity:0; }
-  .hero-shade { background:#0b0d0d; }
+  .topbar { height:54px; padding-inline:4vw; visibility:visible; pointer-events:auto; }
+  .hero-section { min-height:100svh; padding:74px 8vw 28px; }
+  .hero-image { opacity:.92; }
+  .hero-content h1 { font-size:clamp(58px, 8.2vw, 86px); line-height:.84; }
+  .hero-kicker { margin-bottom:13px; }
+  .hero-bottom { margin-top:25px; max-width:560px; gap:26px; }
+  .hero-bottom p { font-size:11px; line-height:1.5; }
+  .round-arrow { width:46px; height:46px; }
 }

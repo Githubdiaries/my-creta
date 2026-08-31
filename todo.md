@@ -1,7 +1,7 @@
-# Match oversized cropped hero reference
+# Rebalance original Creta hero
 
-- [x] Translate the supplied crop into oversized title sizing and intentional edge clipping.
-- [x] Make the hero title the dominant visual layer while preserving the existing vehicle image treatment behind it.
-- [x] Keep navigation and supporting copy clear of the cropped title.
-- [x] Verify the reference-like result at the supplied wide viewport and mobile.
-- [ ] Save the updated checkpoint.
+- [x] Restore the vehicle image and supporting hero content on desktop.
+- [x] Keep the oversized editorial title treatment without reproducing the reference crop exactly.
+- [x] Restore visible desktop navigation and metadata with collision-safe spacing.
+- [x] Verify desktop, short-landscape, and mobile compositions.
+- [ ] Save the corrected checkpoint.
