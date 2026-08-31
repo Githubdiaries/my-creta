@@ -37,7 +37,7 @@ export default function Home() {
           <img src={mark} alt="Creta Car mark" />
           <span>CRETA<span className="brand-dot">/</span>CAR</span>
         </button>
-        <div className="topbar-center mono">CC / 01 — PERFORMANCE, REFRAMED</div>
+        
         <button className="menu-trigger" onClick={() => setMenuOpen((v) => !v)} aria-expanded={menuOpen} aria-label="Open navigation">
           {menuOpen ? <X size={18} /> : <Menu size={18} />}
           <span>{menuOpen ? "Close" : "Menu"}</span>
@@ -60,13 +60,13 @@ export default function Home() {
         <img className="hero-image" src={heroImage} alt="Creta Car on a winding mountain road" />
         <div className="hero-shade" />
         <div className="hero-content">
-          <div className="hero-kicker mono"><span className="lime-dot" /> 01 / A NEW POINT OF VIEW</div>
+          
           <h1>Make the<br /><em>everyday</em><br />feel engineered.</h1>
           <div className="hero-bottom">
             <p>Creta Car is a compact SUV with a larger sense of possibility. Designed to move through the city, then keep going.</p>
             <button className="round-arrow" onClick={() => go("machine")} aria-label="Explore the machine"><ArrowDownRight size={23} /></button>
           </div>
-        </div>
+      
         <div className="hero-index mono">SCROLL TO EXPLORE <span>↓</span></div>
       </section>
 
