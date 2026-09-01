@@ -150,6 +150,4 @@ The live demo is deployed on [Render](https://render.com/) at [my-creta.onrender
 
 MIT
 
-## Credits
 
-Built with [Manus](https://manus.im/).
