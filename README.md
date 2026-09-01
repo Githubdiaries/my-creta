@@ -1,8 +1,3 @@
-[README (2).md](https://github.com/user-attachments/files/31711323/README.2.md)
-
-
-
-
 
 # Creta  — Built for the Next Drive
 
