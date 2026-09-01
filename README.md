@@ -1,8 +1,21 @@
-# Creta Car — Built for the Next Drive
+[README (2).md](https://github.com/user-attachments/files/31711323/README.2.md)
 
-A premium, editorial-style automotive landing page for **Creta Car**, inspired by high-end, motion-led automotive case studies (Mercedes-AMG launch sites were the visual benchmark). Built as a single-page cinematic scroll experience rather than a conventional marketing page.
 
-**Live site:** [my-creta.onrender.com](https://my-creta.onrender.com/)
+
+
+
+# Creta  — Built for the Next Drive
+
+<img width="612" height="277" alt="image" src="https://github.com/user-attachments/assets/b853e992-1c74-4e0f-9717-ff63a12ce71b" />
+
+A premium, editorial-style automotive landing page for **Creta**, inspired by high-end, motion-led automotive case studies (Mercedes-AMG launch sites were the visual benchmark). Built as a single-page cinematic scroll experience rather than a conventional marketing page.
+
+**Live site:**
+[my-creta.onrender.com](https://my-creta.onrender.com/)
+
+
+
+
 
 ---
 
