@@ -63,7 +63,7 @@ export default function Home() {
           <div className="hero-kicker mono"><span className="lime-dot" /> 01 / A NEW POINT OF VIEW</div>
           <h1>Make the<br /><em>everyday</em><br />feel engineered.</h1>
           <div className="hero-bottom">
-            <p>Creta Car is a compact SUV with a larger sense of possibility. Designed to move through the city, then keep going.</p>
+            <p> Hyundai Creta is a compact SUV with a larger sense of possibility. Designed to move through the city, then keep going.</p>
             <button className="round-arrow" onClick={() => go("machine")} aria-label="Explore the machine"><ArrowDownRight size={23} /></button>
           </div>
         </div>
