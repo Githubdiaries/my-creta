@@ -109,39 +109,3 @@ h2 { font-size:clamp(48px,7.5vw,108px); }
 @media (max-width:800px) { .topbar-center { display:none; } .topbar { padding:0 6vw; } .hero-section { padding:0 7vw 8vh; min-height:760px; } .hero-image { object-position:62% center; } .hero-bottom { align-items:flex-start; } .hero-index { display:none; } .statement-section { padding:130px 8vw 120px; } .chapter-rail { position:static; writing-mode:initial; margin-bottom:80px; } .chapter-rail .rail-line { width:52px; height:1px; } .statement-copy { margin:42px 0 28px; } .detail-section { display:flex; flex-direction:column; align-items:stretch; gap:70px; padding:90px 8vw; } .detail-image-wrap img { aspect-ratio:1.15; } .detail-copy .chapter-rail { margin-bottom:50px; } .big-stats { margin-top:75px; gap:20px; } .stat strong { font-size:clamp(52px,16vw,100px); } .spec-sheet { grid-template-columns:1fr 1fr; } .escape-section { min-height:700px; padding:85px 8vw; } .color-picker { right:8vw; bottom:45px; } .footer { grid-template-columns:1fr 1fr; } .footer-meta { text-align:left; } }
 @media (max-width:480px) { .hero-section { min-height:690px; } h1 { font-size:18vw; } h2 { font-size:15vw; } .hero-bottom { flex-direction:column; gap:22px; } .statement-section { min-height:680px; } .ghost-number { font-size:185px; left:-30px; } .big-stats { grid-template-columns:1fr; margin-top:60px; gap:45px; } .stat strong { font-size:25vw; } .spec-sheet-open { max-height:220px; } .footer { grid-template-columns:1fr; gap:17px; } .footer-meta { text-align:left; } }
 @media (prefers-reduced-motion:reduce) { *,*::before,*::after { animation-duration:.001ms!important; transition-duration:.001ms!important; scroll-behavior:auto!important; } }
-
-/* UX refinement: metadata stays in separate zones, while the hero arrow lands on a section-level Explore more control. */
-.next-section-link { position:absolute; top:145px; right:8vw; display:inline-flex; align-items:center; gap:10px; color:var(--lime); background:none; border-bottom:1px solid rgba(200,242,74,.55); padding:0 0 9px; transition:gap .25s var(--ease), border-color .25s var(--ease); }
-.next-section-link:hover { gap:16px; border-color:var(--lime); }
-.statement-section { scroll-margin-top:0; }
-.hero-index { display:flex; align-items:center; gap:12px; padding:10px 0 10px 12px; border-left:1px solid rgba(200,242,74,.65); }
-.hero-index span { display:inline-grid; place-items:center; width:20px; height:20px; border:1px solid var(--lime); border-radius:50%; font-size:13px; line-height:1; }
-@media (max-width:800px) {
-  .next-section-link { position:static; margin:-5px 0 42px auto; }
-  .hero-index { display:flex; }
-}
-@media (min-width:801px) and (orientation:landscape) and (max-height:620px) {
-  .hero-index { right:2.8vw; }
-  .next-section-link { top:110px; }
-}
-
-/* Final UX pass: keep the metadata zones distinct, make the scroll affordance quiet and legible, and prevent closed navigation from bleeding into the hero. */
-.menu-panel { overflow:hidden; visibility:hidden; pointer-events:none; transition:transform .65s var(--ease), visibility 0s linear .65s; }
-.menu-panel-open { visibility:visible; pointer-events:auto; transition:transform .65s var(--ease), visibility 0s linear 0s; }
-.hero-index { display:flex; align-items:center; gap:12px; padding:10px 0 10px 12px; border-left:1px solid rgba(200,242,74,.65); }
-.hero-index span { display:inline-grid; place-items:center; width:20px; height:20px; border:1px solid var(--lime); border-radius:50%; font-size:13px; line-height:1; }
-.next-section-link { position:absolute; top:145px; right:8vw; display:inline-flex; align-items:center; gap:10px; color:var(--lime); background:none; border-bottom:1px solid rgba(200,242,74,.55); padding:0 0 9px; transition:gap .25s var(--ease), border-color .25s var(--ease); }
-.next-section-link:hover { gap:16px; border-color:var(--lime); }
-.statement-section { scroll-margin-top:0; }
-@media (max-width:800px) {
-  .next-section-link { position:static; margin:-5px 0 42px auto; }
-  .hero-index { display:flex; }
-}
-@media (min-width:801px) and (orientation:landscape) and (max-height:620px) {
-  .next-section-link { top:110px; }
-}
-
-/* On compact landscape screens, keep the centered CC / 01 chapter label and remove the duplicate kicker from the constrained header zone. */
-@media (min-width:801px) and (orientation:landscape) and (max-height:620px) {
-  .hero-kicker { display:none; }
-}
