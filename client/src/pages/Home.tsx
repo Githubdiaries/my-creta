@@ -2,10 +2,10 @@
 import { useEffect, useState } from "react";
 import { ArrowDownRight, ArrowUpRight, ChevronDown, Menu, MoveRight, Play, X } from "lucide-react";
 
-const heroImage = "/manus-storage/creta-hero_2001318a.jpg";
-const detailImage = "/manus-storage/creta-detail_00890456.jpg";
-const escapeImage = "/manus-storage/creta-escape_8e90d307.jpg";
-const mark = "/manus-storage/creta-mark_4bc598dd.png";
+const heroImage = "/images/creta-car.webp";
+const detailImage = "/images/creta-car-front.webp";
+const escapeImage = "/images/creta-car-back.webp";
+const mark = "/images/creta-logo.webp";
 
 const colors = ["#25282a", "#d7d4cc", "#c8f24a", "#9aa0a1"];
 
@@ -35,7 +35,6 @@ export default function Home() {
       <header className={`topbar ${scrolled ? "topbar-scrolled" : ""}`}>
         <button className="brand-lockup" onClick={() => go("top")} aria-label="Back to top">
           <img src={mark} alt="Creta Car mark" />
-          <span>CRETA</span>
         </button>
         <div className="topbar-center mono">CC / 01 — PERFORMANCE, REFRAMED</div>
         <button className="menu-trigger" onClick={() => setMenuOpen((v) => !v)} aria-expanded={menuOpen} aria-label="Open navigation">
@@ -47,13 +46,13 @@ export default function Home() {
       <div className={`menu-panel ${menuOpen ? "menu-panel-open" : ""}`} aria-hidden={!menuOpen}>
         <div className="menu-panel-inner">
           <span className="mono menu-kicker">Navigate / 00—04</span>
-          {["top", "machine", "details", "escape"].map((id, i) => (
+          {["top", "machine", "details"].map((id, i) => (
             <button key={id} onClick={() => go(id)} className="menu-link">
               <span className="mono">0{i}</span>{id === "top" ? "Home" : id === "machine" ? "The machine" : id === "details" ? "In the detail" : "Go further"}
               <ArrowUpRight size={21} />
             </button>
           ))}
-          <div className="menu-footer mono">CRETA / EST. 2026</div>
+          <div className="menu-footer mono">CRETA CAR / EST. 2026</div>
         </div>
       </div>
 
@@ -72,7 +71,6 @@ export default function Home() {
       </section>
 
       <section id="machine" className="statement-section section-dark">
-        <button className="next-section-link mono" onClick={() => go("details")} aria-label="Explore more details">Explore more <MoveRight size={16} /></button>
         <div className="chapter-rail mono"><span className="rail-line" /> 02 / THE MACHINE</div>
         <div className="statement-wrap">
           <div className="ghost-number">02</div>
@@ -117,7 +115,7 @@ export default function Home() {
         <div className="color-picker"><span className="mono">CHOOSE YOUR SIGNAL</span><div>{colors.map((color, i) => <button key={color} onClick={() => setActiveColor(i)} className={`color-swatch ${activeColor === i ? "selected" : ""}`} style={{ backgroundColor: color }} aria-label={`Select color ${i + 1}`} />)}</div></div>
       </section>
 
-      <footer className="footer"><div className="footer-brand"><img src={mark} alt="" /><span>CRETA</span></div><p className="mono">Built for the next drive.</p><button className="mono back-top" onClick={() => go("top")}>Back to top ↑</button><span className="mono footer-meta">© 2026 / CC</span></footer>
+      <footer className="footer"><div className="footer-brand"><img src={mark} alt="" /></div><p className="mono">Built for the next drive.</p><button className="mono back-top" onClick={() => go("top")}>Back to top ↑</button><span className="mono footer-meta">© 2026 / CC</span></footer>
     </main>
   );
 }
