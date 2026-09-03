@@ -2,15 +2,15 @@
 import { useEffect, useState } from "react";
 import { ArrowDownRight, ArrowUpRight, ChevronDown, Menu, MoveRight, Play, X } from "lucide-react";
 
-const heroImage = "/manus-storage/creta-hero_2001318a.jpg";
-const detailImage = "/manus-storage/creta-detail_00890456.jpg";
-const escapeImage = "/manus-storage/creta-escape_8e90d307.jpg";
-const mark = "/manus-storage/creta-mark_4bc598dd.png";
+const heroImage = "https://files.manuscdn.com/user_upload_by_module/session_file/310519663924617408/TQpOBdvwkIXSgCIV.jpg";
+const detailImage = "https://files.manuscdn.com/user_upload_by_module/session_file/310519663924617408/CyQLvCDOGPdijvzZ.jpg";
+const escapeImage = "https://files.manuscdn.com/user_upload_by_module/session_file/310519663924617408/eBLVgerJoaCQtbYh.jpg";
+const mark = "https://files.manuscdn.com/user_upload_by_module/session_file/310519663924617408/dGnrtFrVzepijgDF.png";
 
 const colors = ["#25282a", "#d7d4cc", "#c8f24a", "#9aa0a1"];
 
-function scrollToId(id: string) {
-  document.getElementById(id)?.scrollIntoView({ behavior: "smooth" });
+function scrollToId(id: string, block: ScrollLogicalPosition = "start") {
+  document.getElementById(id)?.scrollIntoView({ behavior: "smooth", block });
 }
 
 export default function Home() {
@@ -25,9 +25,9 @@ export default function Home() {
     return () => window.removeEventListener("scroll", onScroll);
   }, []);
 
-  const go = (id: string) => {
+  const go = (id: string, block: ScrollLogicalPosition = "start") => {
     setMenuOpen(false);
-    scrollToId(id);
+    scrollToId(id, block);
   };
 
   return (
@@ -35,7 +35,6 @@ export default function Home() {
       <header className={`topbar ${scrolled ? "topbar-scrolled" : ""}`}>
         <button className="brand-lockup" onClick={() => go("top")} aria-label="Back to top">
           <img src={mark} alt="Creta Car mark" />
-          <span>CRETA<span className="brand-dot">/</span>CAR</span>
         </button>
         <div className="topbar-center mono">CC / 01 — PERFORMANCE, REFRAMED</div>
         <button className="menu-trigger" onClick={() => setMenuOpen((v) => !v)} aria-expanded={menuOpen} aria-label="Open navigation">
@@ -64,8 +63,8 @@ export default function Home() {
           <div className="hero-kicker mono"><span className="lime-dot" /> 01 / A NEW POINT OF VIEW</div>
           <h1>Make the<br /><em>everyday</em><br />feel engineered.</h1>
           <div className="hero-bottom">
-            <p>Creta Car is a compact SUV with a larger sense of possibility. Designed to move through the city, then keep going.</p>
-            <button className="round-arrow" onClick={() => go("machine")} aria-label="Explore the machine"><ArrowDownRight size={23} /></button>
+            <p>Hyundai Creta is a compact SUV with a larger sense of possibility. Designed to move through the city, then keep going.</p>
+            <button className="round-arrow" onClick={() => go("explore-details", "center")} aria-label="Explore the details"><ArrowDownRight size={23} /></button>
           </div>
         </div>
         <div className="hero-index mono">SCROLL TO EXPLORE <span>↓</span></div>
@@ -78,7 +77,7 @@ export default function Home() {
           <p className="eyebrow mono">BUILT FOR THE IN-BETWEEN</p>
           <h2>City sharp.<br /><span>Wild at heart.</span></h2>
           <p className="statement-copy">From the first turn of the wheel to the last light on the horizon, every surface has a reason. Creta carries presence without the noise.</p>
-          <button className="text-link" onClick={() => go("details")}>Explore the details <MoveRight size={17} /></button>
+          <button id="explore-details" className="text-link" onClick={() => go("details")}>Explore the details <MoveRight size={17} /></button>
         </div>
       </section>
 
@@ -116,7 +115,7 @@ export default function Home() {
         <div className="color-picker"><span className="mono">CHOOSE YOUR SIGNAL</span><div>{colors.map((color, i) => <button key={color} onClick={() => setActiveColor(i)} className={`color-swatch ${activeColor === i ? "selected" : ""}`} style={{ backgroundColor: color }} aria-label={`Select color ${i + 1}`} />)}</div></div>
       </section>
 
-      <footer className="footer"><div className="footer-brand"><img src={mark} alt="" /><span>CRETA / CAR</span></div><p className="mono">Built for the next drive.</p><button className="mono back-top" onClick={() => go("top")}>Back to top ↑</button><span className="mono footer-meta">© 2026 / CC</span></footer>
+      <footer className="footer"><div className="footer-brand"><img src={mark} alt="" /></div><p className="mono">Built for the next drive.</p><button className="mono back-top" onClick={() => go("top")}>Back to top ↑</button><span className="mono footer-meta">© 2026 / CC</span></footer>
     </main>
   );
 }

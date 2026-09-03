@@ -109,3 +109,18 @@ h2 { font-size:clamp(48px,7.5vw,108px); }
 @media (max-width:800px) { .topbar-center { display:none; } .topbar { padding:0 6vw; } .hero-section { padding:0 7vw 8vh; min-height:760px; } .hero-image { object-position:62% center; } .hero-bottom { align-items:flex-start; } .hero-index { display:none; } .statement-section { padding:130px 8vw 120px; } .chapter-rail { position:static; writing-mode:initial; margin-bottom:80px; } .chapter-rail .rail-line { width:52px; height:1px; } .statement-copy { margin:42px 0 28px; } .detail-section { display:flex; flex-direction:column; align-items:stretch; gap:70px; padding:90px 8vw; } .detail-image-wrap img { aspect-ratio:1.15; } .detail-copy .chapter-rail { margin-bottom:50px; } .big-stats { margin-top:75px; gap:20px; } .stat strong { font-size:clamp(52px,16vw,100px); } .spec-sheet { grid-template-columns:1fr 1fr; } .escape-section { min-height:700px; padding:85px 8vw; } .color-picker { right:8vw; bottom:45px; } .footer { grid-template-columns:1fr 1fr; } .footer-meta { text-align:left; } }
 @media (max-width:480px) { .hero-section { min-height:690px; } h1 { font-size:18vw; } h2 { font-size:15vw; } .hero-bottom { flex-direction:column; gap:22px; } .statement-section { min-height:680px; } .ghost-number { font-size:185px; left:-30px; } .big-stats { grid-template-columns:1fr; margin-top:60px; gap:45px; } .stat strong { font-size:25vw; } .spec-sheet-open { max-height:220px; } .footer { grid-template-columns:1fr; gap:17px; } .footer-meta { text-align:left; } }
 @media (prefers-reduced-motion:reduce) { *,*::before,*::after { animation-duration:.001ms!important; transition-duration:.001ms!important; scroll-behavior:auto!important; } }
+
+/* Final layout cleanup: the mark stands alone, while the scroll affordance lives in the open sky instead of over the SUV. */
+@media (min-width:801px) {
+  .brand-lockup { gap:0; }
+  .brand-lockup img { width:30px; height:30px; }
+  .hero-index { top:104px; right:4vw; writing-mode:horizontal-tb; display:flex; align-items:center; gap:10px; padding:9px 0 9px 12px; border-left:1px solid rgba(200,242,74,.65); color:rgba(241,240,235,.72); }
+  .hero-index span { display:inline-grid; place-items:center; width:20px; height:20px; border:1px solid var(--lime); border-radius:50%; font-size:13px; line-height:1; }
+}
+@media (min-width:801px) and (orientation:landscape) and (max-height:620px) {
+  .hero-index { top:88px; right:4vw; }
+}
+
+/* Closed navigation must not paint through the hero. */
+.menu-panel { overflow:hidden; visibility:hidden; pointer-events:none; transition:transform .65s var(--ease), visibility 0s linear .65s; }
+.menu-panel-open { visibility:visible; pointer-events:auto; transition:transform .65s var(--ease), visibility 0s linear 0s; }
