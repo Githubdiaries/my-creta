@@ -145,3 +145,12 @@ h2 { font-size:clamp(48px,7.5vw,108px); }
 @media (min-width:801px) and (orientation:landscape) and (max-height:620px) {
   .hero-kicker { display:none; }
 }
+
+/* Image-only composition adjustment: preserve the headline exactly and let the SUV occupy the right-hand visual field. */
+@media (min-width:801px) {
+  .hero-image { object-position:72% center; filter:brightness(.72) saturate(.68) contrast(1.04); }
+  .hero-shade { background:linear-gradient(90deg,rgba(8,10,10,.9) 0%,rgba(8,10,10,.48) 46%,rgba(8,10,10,.08) 100%),linear-gradient(0deg,rgba(8,10,10,.8),transparent 56%); }
+}
+@media (min-width:801px) and (orientation:landscape) and (max-height:620px) {
+  .hero-image { object-position:70% center; }
+}

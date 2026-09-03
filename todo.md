@@ -1,7 +1,8 @@
-# Hero navigation and metadata refinement
+# Diagnose current Render commit
 
-- [x] Inspect the rolled-back Home.tsx hero and identify current lockup, metadata, and arrow targets.
-- [x] Remove “/ CAR” from the top and footer while preserving hero image scale.
-- [x] Reposition or simplify `01 / NEW POINT` and `CC` metadata to avoid collisions.
-- [x] Add a sleek scroll indicator and a visible Explore more anchor at the next-section landing point.
-- [x] Verify desktop, short-landscape, and mobile behavior, then checkpoint.
+- [x] Inspect the live Render page at the supplied URL.
+- [x] Compare the live result with the current local preview and source assets.
+- [x] Identify and fix the deployment, runtime, or layout mismatch.
+- [x] Restore the user-confirmed Hyundai Creta copy.
+- [x] Validate the public asset URLs and hero composition.
+- [ ] Save the corrected checkpoint.

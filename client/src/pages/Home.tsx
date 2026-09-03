@@ -2,10 +2,10 @@
 import { useEffect, useState } from "react";
 import { ArrowDownRight, ArrowUpRight, ChevronDown, Menu, MoveRight, Play, X } from "lucide-react";
 
-const heroImage = "/manus-storage/creta-hero_2001318a.jpg";
-const detailImage = "/manus-storage/creta-detail_00890456.jpg";
-const escapeImage = "/manus-storage/creta-escape_8e90d307.jpg";
-const mark = "/manus-storage/creta-mark_4bc598dd.png";
+const heroImage = "https://files.manuscdn.com/user_upload_by_module/session_file/310519663924617408/TQpOBdvwkIXSgCIV.jpg";
+const detailImage = "https://files.manuscdn.com/user_upload_by_module/session_file/310519663924617408/CyQLvCDOGPdijvzZ.jpg";
+const escapeImage = "https://files.manuscdn.com/user_upload_by_module/session_file/310519663924617408/eBLVgerJoaCQtbYh.jpg";
+const mark = "https://files.manuscdn.com/user_upload_by_module/session_file/310519663924617408/dGnrtFrVzepijgDF.png";
 
 const colors = ["#25282a", "#d7d4cc", "#c8f24a", "#9aa0a1"];
 
