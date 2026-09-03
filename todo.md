@@ -1,8 +1,7 @@
-# Creta experience cleanup
+# Hero navigation and metadata refinement
 
-- [x] Audit live Render and current source for logo, scroll, Explore actions, and vehicle imagery.
-- [x] Remove the CRETA wordmark near the top logo, retaining the mark only.
-- [x] Move the scroll control into clear space so it does not cover the car.
-- [x] Make the hero arrow land on the existing Explore the details action.
-- [x] Retain one Explore action and restore any missing car image asset.
-- [x] Verify responsive behavior and checkpoint the correction.
+- [x] Inspect the rolled-back Home.tsx hero and identify current lockup, metadata, and arrow targets.
+- [x] Remove “/ CAR” from the top and footer while preserving hero image scale.
+- [x] Reposition or simplify `01 / NEW POINT` and `CC` metadata to avoid collisions.
+- [x] Add a sleek scroll indicator and a visible Explore more anchor at the next-section landing point.
+- [x] Verify desktop, short-landscape, and mobile behavior, then checkpoint.
