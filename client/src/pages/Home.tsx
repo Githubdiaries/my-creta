@@ -47,7 +47,7 @@ export default function Home() {
       <div className={`menu-panel ${menuOpen ? "menu-panel-open" : ""}`} aria-hidden={!menuOpen}>
         <div className="menu-panel-inner">
           <span className="mono menu-kicker">Navigate / 00—04</span>
-          {["top", "machine", "details", "escape"].map((id, i) => (
+          {["top", "machine", "details"].map((id, i) => (
             <button key={id} onClick={() => go(id)} className="menu-link">
               <span className="mono">0{i}</span>{id === "top" ? "Home" : id === "machine" ? "The machine" : id === "details" ? "In the detail" : "Go further"}
               <ArrowUpRight size={21} />
@@ -116,7 +116,7 @@ export default function Home() {
         <div className="color-picker"><span className="mono">CHOOSE YOUR SIGNAL</span><div>{colors.map((color, i) => <button key={color} onClick={() => setActiveColor(i)} className={`color-swatch ${activeColor === i ? "selected" : ""}`} style={{ backgroundColor: color }} aria-label={`Select color ${i + 1}`} />)}</div></div>
       </section>
 
-      <footer className="footer"><div className="footer-brand"><img src={mark} alt="" /><span>CRETA / CAR</span></div><p className="mono">Built for the next drive.</p><button className="mono back-top" onClick={() => go("top")}>Back to top ↑</button><span className="mono footer-meta">© 2026 / CC</span></footer>
+      <footer className="footer"><div className="footer-brand"><img src={mark} alt="" /></div><p className="mono">Built for the next drive.</p><button className="mono back-top" onClick={() => go("top")}>Back to top ↑</button><span className="mono footer-meta">© 2026 / CC</span></footer>
     </main>
   );
 }
